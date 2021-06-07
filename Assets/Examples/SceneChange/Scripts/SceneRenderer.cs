@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.Linq;
+using Cysharp.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -8,6 +9,11 @@ namespace Examples.SceneChange.Scripts
     public class SceneRenderer : MonoBehaviour
     {
         public void Render(string[] sceneNames)
+        {
+            RenderAsync(sceneNames).Forget();
+        }
+
+        public async UniTask RenderAsync(string[] sceneNames)
         {
             var requestSceneMap = CreateRequestSceneMap(sceneNames);
             var currentSceneMap = CreateCurrentSceneMap();
@@ -18,14 +24,24 @@ namespace Examples.SceneChange.Scripts
                 .Where(scene => !requestSceneMap.ContainsKey(scene) || !requestSceneMap[scene])
                 .Distinct().ToList();
 
-            foreach (var scene in loadScenes)
             {
-                SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive);
+                var list = new List<UniTask>();
+                foreach (var scene in loadScenes)
+                {
+                    list.Add(SceneManager.LoadSceneAsync(scene, LoadSceneMode.Additive).ToUniTask());
+                }
+
+                await UniTask.WhenAll(list);
             }
 
-            foreach (var scene in unloadScenes)
             {
-                SceneManager.UnloadSceneAsync(scene);
+                var list = new List<UniTask>();
+                foreach (var scene in unloadScenes)
+                {
+                    list.Add(SceneManager.UnloadSceneAsync(scene).ToUniTask());
+                }
+
+                await UniTask.WhenAll(list);
             }
         }
 

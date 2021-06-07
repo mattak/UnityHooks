@@ -17,5 +17,10 @@ namespace UnityHooks
 
             return _state[key] as Hook<TValue>;
         }
+
+        public static Hook<TValue> UseState<TValue>(HookKey<TValue> key)
+        {
+            return UseState(key.Key, key.DefaultValue);
+        }
     }
 }

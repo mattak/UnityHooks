@@ -10,7 +10,7 @@ namespace Examples.SceneChange.Scripts
 
         private void Start()
         {
-            var hook = Hooks.UseState("scenes", new[] {"Base", "Multi1"});
+            var hook = Hooks.UseState(HookKeys.SCENE);
             hook.Value.Subscribe(_sceneRenderer.Render).AddTo(this);
         }
     }
