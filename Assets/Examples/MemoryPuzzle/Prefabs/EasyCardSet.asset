@@ -1,0 +1,51 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17f1b8c6fe134f09bb5a0b4087972909, type: 3}
+  m_Name: EasyCardSet
+  m_EditorClassIdentifier: 
+  cards:
+  - name: star
+    sprite: {fileID: 21300000, guid: 08bb9b8d1b91c4086945f996c6ea9adb, type: 3}
+    palette: 5
+  - name: bear
+    sprite: {fileID: 21300000, guid: 89f0c3960b50144cb986bab71f5da062, type: 3}
+    palette: 5
+  - name: crown
+    sprite: {fileID: 21300000, guid: 95664001830b7490683551518aacb816, type: 3}
+    palette: 5
+  - name: dual_triangle
+    sprite: {fileID: 21300000, guid: 0a45b7aa624e94bfd94a96aaed7fb354, type: 3}
+    palette: 5
+  - name: duck
+    sprite: {fileID: 21300000, guid: be6fc42e2df974a14a5414ad38c86102, type: 3}
+    palette: 5
+  - name: key
+    sprite: {fileID: 21300000, guid: f38269aa39b8f47ca94f96b97e684bc2, type: 3}
+    palette: 5
+  - name: owl
+    sprite: {fileID: 21300000, guid: 6a578fa2b86334bd898ef4738e4fe0e9, type: 3}
+    palette: 5
+  - name: panda
+    sprite: {fileID: 21300000, guid: b6c32c92a09a84e768b630976224a952, type: 3}
+    palette: 5
+  - name: pig
+    sprite: {fileID: 21300000, guid: c2c530be23a0944c9aca77826333a433, type: 3}
+    palette: 5
+  - name: rabbit
+    sprite: {fileID: 21300000, guid: 9b3b4cd05934e408ca6ecf2f027ad0a5, type: 3}
+    palette: 5
+  - name: shue
+    sprite: {fileID: 21300000, guid: f182658b8ae6041b28b0aa956db89fe9, type: 3}
+    palette: 5
+  - name: squirrels
+    sprite: {fileID: 21300000, guid: 491c2e63bd5164ca6b27e38720832bd3, type: 3}
+    palette: 5

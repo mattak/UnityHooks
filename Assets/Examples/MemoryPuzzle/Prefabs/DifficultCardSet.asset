@@ -1,0 +1,90 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 17f1b8c6fe134f09bb5a0b4087972909, type: 3}
+  m_Name: DifficultCardSet
+  m_EditorClassIdentifier: 
+  cards:
+  - name: star - blue
+    sprite: {fileID: 21300000, guid: 08bb9b8d1b91c4086945f996c6ea9adb, type: 3}
+    palette: 0
+  - name: star - green
+    sprite: {fileID: 21300000, guid: 08bb9b8d1b91c4086945f996c6ea9adb, type: 3}
+    palette: 1
+  - name: star - red
+    sprite: {fileID: 21300000, guid: 08bb9b8d1b91c4086945f996c6ea9adb, type: 3}
+    palette: 2
+  - name: star - orange
+    sprite: {fileID: 21300000, guid: 08bb9b8d1b91c4086945f996c6ea9adb, type: 3}
+    palette: 3
+  - name: star - pink
+    sprite: {fileID: 21300000, guid: 08bb9b8d1b91c4086945f996c6ea9adb, type: 3}
+    palette: 4
+  - name: dual_triangle - blue
+    sprite: {fileID: 21300000, guid: 0a45b7aa624e94bfd94a96aaed7fb354, type: 3}
+    palette: 0
+  - name: dual_triangle - green
+    sprite: {fileID: 21300000, guid: 0a45b7aa624e94bfd94a96aaed7fb354, type: 3}
+    palette: 1
+  - name: dual_triangle - red
+    sprite: {fileID: 21300000, guid: 0a45b7aa624e94bfd94a96aaed7fb354, type: 3}
+    palette: 2
+  - name: dual_triangle - orange
+    sprite: {fileID: 21300000, guid: 0a45b7aa624e94bfd94a96aaed7fb354, type: 3}
+    palette: 3
+  - name: dual_triangle - pink
+    sprite: {fileID: 21300000, guid: 0a45b7aa624e94bfd94a96aaed7fb354, type: 3}
+    palette: 4
+  - name: bear - blue
+    sprite: {fileID: 21300000, guid: 89f0c3960b50144cb986bab71f5da062, type: 3}
+    palette: 0
+  - name: bear - green
+    sprite: {fileID: 21300000, guid: 89f0c3960b50144cb986bab71f5da062, type: 3}
+    palette: 1
+  - name: bear - red
+    sprite: {fileID: 21300000, guid: 89f0c3960b50144cb986bab71f5da062, type: 3}
+    palette: 2
+  - name: bear - orange
+    sprite: {fileID: 21300000, guid: 89f0c3960b50144cb986bab71f5da062, type: 3}
+    palette: 3
+  - name: bear - pink
+    sprite: {fileID: 21300000, guid: 89f0c3960b50144cb986bab71f5da062, type: 3}
+    palette: 4
+  - name: crown - blue
+    sprite: {fileID: 21300000, guid: 95664001830b7490683551518aacb816, type: 3}
+    palette: 0
+  - name: crown - green
+    sprite: {fileID: 21300000, guid: 95664001830b7490683551518aacb816, type: 3}
+    palette: 1
+  - name: crown - red
+    sprite: {fileID: 21300000, guid: 95664001830b7490683551518aacb816, type: 3}
+    palette: 2
+  - name: crown - orange
+    sprite: {fileID: 21300000, guid: 95664001830b7490683551518aacb816, type: 3}
+    palette: 3
+  - name: crown - pink
+    sprite: {fileID: 21300000, guid: 95664001830b7490683551518aacb816, type: 3}
+    palette: 4
+  - name: duck - blue
+    sprite: {fileID: 21300000, guid: be6fc42e2df974a14a5414ad38c86102, type: 3}
+    palette: 0
+  - name: duck - green
+    sprite: {fileID: 21300000, guid: be6fc42e2df974a14a5414ad38c86102, type: 3}
+    palette: 1
+  - name: duck - red
+    sprite: {fileID: 21300000, guid: be6fc42e2df974a14a5414ad38c86102, type: 3}
+    palette: 2
+  - name: duck - orange
+    sprite: {fileID: 21300000, guid: be6fc42e2df974a14a5414ad38c86102, type: 3}
+    palette: 3
+  - name: duck - pink
+    sprite: {fileID: 21300000, guid: be6fc42e2df974a14a5414ad38c86102, type: 3}
+    palette: 4
