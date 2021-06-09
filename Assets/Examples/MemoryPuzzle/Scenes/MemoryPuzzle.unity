@@ -569,7 +569,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca198eb40e19411697176fb21f4fce0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cardSet: {fileID: 11400000, guid: 7e4a7f246f2004ecb848a6fdbb9a9451, type: 2}
+  _cardSet: {fileID: 11400000, guid: 6e6dd8da6fd65402d8eb6a861cfc17ab, type: 2}
   _stageSizeX: 4
   _stageSizeY: 4
 --- !u!1 &783351651
