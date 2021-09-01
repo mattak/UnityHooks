@@ -1,0 +1,14 @@
+{
+  "name": "me.mattak.unityhooks",
+  "displayName": "UnityHooks",
+  "version": "0.0.1",
+  "unity": "2020.1",
+  "description": "React hooks for unity",
+  "license": "MIT",
+  "author": {
+    "name": "Takuma Maruyama"
+  },
+  "dependencies": {
+    "com.neuecc.unirx": "7.1.0"
+  }
+}
