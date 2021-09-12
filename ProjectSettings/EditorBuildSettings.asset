@@ -14,4 +14,16 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Examples/SceneChange/Scenes/Multi2.unity
     guid: 5cca20324d7034066b4b5c44280c1e09
+  - enabled: 1
+    path: Assets/Examples/PageChange/Scenes/Content1.unity
+    guid: ed7906b59f70f4b6eaec608af487099e
+  - enabled: 1
+    path: Assets/Examples/PageChange/Scenes/Content2.unity
+    guid: 79d8f658004244b1cb12c32ed72fd388
+  - enabled: 1
+    path: Assets/Examples/PageChange/Scenes/Footer.unity
+    guid: 02f6089ff85434127814d4708303079b
+  - enabled: 1
+    path: Assets/Examples/PageChange/Scenes/Header.unity
+    guid: 37acfb3044ef8486abd5d2865efa29f5
   m_configObjects: {}
