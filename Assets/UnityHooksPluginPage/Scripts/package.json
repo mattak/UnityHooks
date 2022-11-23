@@ -1,7 +1,7 @@
 {
   "name": "me.mattak.unityhooks.pluginpage",
   "displayName": "UnityHooks.PluginPage",
-  "version": "0.0.3",
+  "version": "0.1.0",
   "unity": "2020.1",
   "description": "Plugin page for UnityHooks",
   "license": "MIT",
@@ -11,6 +11,6 @@
   "dependencies": {
     "com.neuecc.unirx": "7.1.0",
     "com.cysharp.unitask": "2.2.5",
-    "me.mattak.unityhooks": "0.0.3"
+    "me.mattak.unityhooks": "0.1.0"
   }
 }
