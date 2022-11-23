@@ -19,7 +19,7 @@ namespace UnityHooks.PluginPage.Binder
             this.GetComponent<Button>()
                 .OnClickAsObservable()
                 .Select(_ => scenes)
-                .Subscribe(hook.Update)
+                .Subscribe(hook)
                 .AddTo(this);
         }
     }

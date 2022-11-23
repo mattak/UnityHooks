@@ -34,7 +34,7 @@ namespace Examples.MemoryPuzzle.Scripts
 
             if (card.state == CardState.Hidden)
             {
-                var selectedCard = cardsHook.Current.FirstOrDefault(x => x.state == CardState.Selected);
+                var selectedCard = cardsHook.Value.FirstOrDefault(x => x.state == CardState.Selected);
                 if (selectedCard != default)
                 {
                     var isSameCard = selectedCard.IsSameCard(card);
@@ -42,12 +42,12 @@ namespace Examples.MemoryPuzzle.Scripts
                     UpdateCards(cardsHook, selectedCard.stageIndex, card.stageIndex, CardState.Selected);
                     await ResetDelay(cardsHook, selectedCard.stageIndex, card.stageIndex, nextState);
 
-                    if (!isSameCard) ngCountHook.Update(ngCountHook.Current + 1);
+                    if (!isSameCard) ngCountHook.Value += 1;
                 }
                 else
                 {
-                    cardsHook.Current[card.stageIndex].state = CardState.Selected;
-                    cardsHook.Update(cardsHook.Current);
+                    cardsHook.Value[card.stageIndex].state = CardState.Selected;
+                    cardsHook.ForceUpdate();
                 }
             }
         }
@@ -60,9 +60,9 @@ namespace Examples.MemoryPuzzle.Scripts
 
         private void UpdateCards(Hook<Card[]> hook, int index1, int index2, CardState state)
         {
-            hook.Current[index1].state = state;
-            hook.Current[index2].state = state;
-            hook.Update(hook.Current);
+            hook.Value[index1].state = state;
+            hook.Value[index2].state = state;
+            hook.ForceUpdate();
         }
     }
 }

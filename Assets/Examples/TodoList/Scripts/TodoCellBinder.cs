@@ -34,7 +34,7 @@ namespace Examples.TodoList.Scripts
 
         private void UpdateTodo(Hook<Todo[]> hook, Todo todo, bool isDone)
         {
-            var todos = hook.Current;
+            var todos = hook.Value;
 
             for (var i = 0; i < todos.Length; i++)
             {
@@ -45,7 +45,7 @@ namespace Examples.TodoList.Scripts
                 }
             }
 
-            hook.Update(todos);
+            hook.Value = todos;
         }
     }
 }

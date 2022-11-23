@@ -7,17 +7,15 @@ namespace UnityHooks.PluginPage.Renderer
         public void Push(Page page)
         {
             var hook = Hooks.UseState(PageHookKeys.PAGE_STACK);
-            hook.Current.Push(page);
-            hook.Update(hook.Current);
+            hook.Update(x => x.Push(page));
         }
 
         public void Pop()
         {
             var hook = Hooks.UseState(PageHookKeys.PAGE_STACK);
-            if (hook.Current.Count > 1)
+            if (hook.Value.Count > 1)
             {
-                hook.Current.Pop();
-                hook.Update(hook.Current);
+                hook.Update(x => x.Pop());
             }
             else
             {
@@ -28,9 +26,8 @@ namespace UnityHooks.PluginPage.Renderer
         public void Replace(Page page)
         {
             var hook = Hooks.UseState(PageHookKeys.PAGE_STACK);
-            if (hook.Current.Count > 0) hook.Current.Pop();
-            hook.Current.Push(page);
-            hook.Update(hook.Current);
+            if (hook.Value.Count > 0) hook.Value.Pop();
+            hook.Update(x => x.Push(page));
         }
     }
 }

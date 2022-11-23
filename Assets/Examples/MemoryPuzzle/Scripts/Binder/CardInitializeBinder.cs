@@ -19,8 +19,8 @@ namespace Examples.MemoryPuzzle.Scripts
             CheckInitializeState(length);
 
             var reset = Hooks.UseState(HookKeys.Reset);
-            reset.Value.Where(x => x).Subscribe(_ => Reset(length)).AddTo(this);
-            reset.Update(true);
+            reset.Where(x => x).Subscribe(_ => Reset(length)).AddTo(this);
+            reset.Value = true;
         }
 
         private void CheckInitializeState(int length)
@@ -33,10 +33,10 @@ namespace Examples.MemoryPuzzle.Scripts
         private void Reset(int length)
         {
             var stage = Hooks.UseState(HookKeys.StageCard);
-            stage.Update(CreateStage(length));
+            stage.Value = CreateStage(length);
 
             var ngCount = Hooks.UseState(HookKeys.NgCount);
-            ngCount.Update(0);
+            ngCount.Value = 0;
         }
 
         private Card[] CreateStage(int length)

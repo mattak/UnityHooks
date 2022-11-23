@@ -15,7 +15,7 @@ namespace Examples.SceneChange.Scripts
         {
             Assert.IsTrue(_loadScenes != default, $"_loadScenes is default. please attach on {gameObject.name}");
             var hook = Hooks.UseState(HookKeys.SCENE);
-            _buttonInput.clickAsObservable.Select(_ => _loadScenes).Subscribe(hook.Update).AddTo(this);
+            _buttonInput.clickAsObservable.Select(_ => _loadScenes).Subscribe(hook).AddTo(this);
         }
     }
 }

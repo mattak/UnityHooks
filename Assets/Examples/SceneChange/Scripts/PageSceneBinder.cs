@@ -11,8 +11,7 @@ namespace Examples.SceneChange.Scripts
         {
             var renderer = GetComponent<PageSceneRenderer>();
             var hook = Hooks.UseState(HookKeys.PAGE);
-            hook.Value
-                .Where(x => x.Count > 0)
+            hook.Where(x => x.Count > 0)
                 .Select(x => x.Peek())
                 .Where(it => it != null)
                 .Subscribe(renderer.Render)

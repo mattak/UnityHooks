@@ -30,7 +30,7 @@ namespace Examples.DragDrop.Scripts
 
         private void SelectDropName(Hook<string[]> hook, int index, string dropName)
         {
-            var current = hook.Current;
+            var current = hook.Value;
             var otherIndex = (index + 1) % 2;
             if (current[otherIndex] == dropName)
             {
@@ -38,12 +38,12 @@ namespace Examples.DragDrop.Scripts
                 var newIndexs = new string[2];
                 newIndexs[index] = current[otherIndex];
                 newIndexs[otherIndex] = current[index];
-                hook.Update(newIndexs);
+                hook.Value = newIndexs;
             }
             else
             {
                 current[index] = dropName;
-                hook.Update(current);
+                hook.Value = current;
             }
         }
     }

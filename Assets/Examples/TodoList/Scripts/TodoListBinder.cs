@@ -14,10 +14,10 @@ namespace Examples.TodoList.Scripts
             var todosHook = Hooks.UseState(HookKeys.Todos);
             var filterHook = Hooks.UseState(HookKeys.Filter);
 
-            Observable.CombineLatest(todosHook.Value, filterHook.Value, Filter)
+            Observable.CombineLatest(todosHook, filterHook, Filter)
                 .Subscribe(_todoListView.Render)
                 .AddTo(this);
-            todosHook.Update(new[] {new Todo("sample1", false), new Todo("sample2", true)});
+            todosHook.Value = new[] {new Todo("sample1", false), new Todo("sample2", true)};
         }
 
         private Todo[] Filter(Todo[] todos, TodoFilter filter)

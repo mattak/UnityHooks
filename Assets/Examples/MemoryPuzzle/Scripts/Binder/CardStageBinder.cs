@@ -10,8 +10,7 @@ namespace Examples.MemoryPuzzle.Scripts
         private void Start()
         {
             var hook = Hooks.UseState(HookKeys.StageCard);
-            hook.Value
-                .Where(x => x != default && x.Length >= 2)
+            hook.Where(x => x != default && x.Length >= 2)
                 .Subscribe(GetComponent<CardsSpawner>().Render)
                 .AddTo(this);
         }

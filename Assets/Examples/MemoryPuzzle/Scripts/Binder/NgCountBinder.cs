@@ -11,7 +11,7 @@ namespace Examples.MemoryPuzzle.Scripts
         private void Start()
         {
             var hook = Hooks.UseState(HookKeys.NgCount);
-            hook.Value.Select(x => $"x {x}")
+            hook.Select(x => $"x {x}")
                 .Subscribe(GetComponent<TextRenderer>().Render)
                 .AddTo(this);
         }

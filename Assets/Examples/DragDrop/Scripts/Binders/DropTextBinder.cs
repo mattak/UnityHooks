@@ -18,8 +18,7 @@ namespace Examples.DragDrop.Scripts
             var names = _dropTexts.Select(it => it.name).ToArray();
             var hook = Hooks.UseState("selected_names", names);
 
-            hook.Value
-                .Subscribe(Render)
+            hook.Subscribe(Render)
                 .AddTo(this);
         }
 

@@ -13,8 +13,7 @@ namespace Examples.MemoryPuzzle.Scripts
         private void Start()
         {
             var hook = Hooks.UseState(HookKeys.StageCard);
-            hook.Value
-                .Select(ConvertCounts)
+            hook.Select(ConvertCounts)
                 .Subscribe(GetComponent<TextRenderer>().Render)
                 .AddTo(this);
         }
