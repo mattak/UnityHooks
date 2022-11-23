@@ -18,7 +18,7 @@ namespace Examples.Popup.Scripts
             var hook = Hooks.UseState("username", "default username");
 
             _buttonInput.clickAsObservable.Subscribe(_ => manager.Show(_popupPrefab)).AddTo(this);
-            hook.Value.Subscribe(this._text.Render).AddTo(this);
+            hook.Subscribe(this._text.Render).AddTo(this);
         }
     }
 }

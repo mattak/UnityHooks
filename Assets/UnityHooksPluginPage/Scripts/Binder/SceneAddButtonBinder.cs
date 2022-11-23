@@ -20,9 +20,7 @@ namespace UnityHooks.PluginPage.Binder
                 .Select(_ => scenes)
                 .Subscribe(x =>
                 {
-                    var list = hook.Current;
-                    list.AddRange(x);
-                    hook.Update(list);
+                    hook.Update(list => list.AddRange(x));
                 })
                 .AddTo(this);
         }

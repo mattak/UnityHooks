@@ -13,7 +13,7 @@ namespace Examples.Popup.Scripts
         private void Start()
         {
             var hook = Hooks.UseState("username", "default username");
-            _inputField.textAsObservable.Subscribe(hook.Update).AddTo(this);
+            _inputField.textAsObservable.Subscribe(hook).AddTo(this);
             _okButtonInput.clickAsObservable.Subscribe(_ => PopupManager.Instance.Dismiss()).AddTo(this);
         }
     }

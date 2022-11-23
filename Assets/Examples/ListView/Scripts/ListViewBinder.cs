@@ -17,12 +17,12 @@ namespace Examples.ListView.Scripts
             FetchCells(hook);
         }
 
-        private void BindList(Hook<List<Cell>> hook) => hook.Value.Subscribe(_listView.Render).AddTo(this);
+        private void BindList(Hook<List<Cell>> hook) => hook.Subscribe(_listView.Render).AddTo(this);
 
         private void FetchCells(Hook<List<Cell>> hook)
         {
             var cells = new List<Cell> {new Cell("title1"), new Cell("title2")};
-            hook.Update(cells);
+            hook.Value = cells;
         }
     }
 }

@@ -15,10 +15,11 @@ namespace Examples.TodoList.Scripts
         private void Start()
         {
             var editMessage = Hooks.UseState(HookKeys.EditMessage);
-            _bodyInput.textAsObservable.Subscribe(editMessage.Update).AddTo(this);
+
+            _bodyInput.textAsObservable.Subscribe(editMessage).AddTo(this);
 
             _addButtonInput.clickAsObservable
-                .Select(_ => editMessage.Current)
+                .Select(_ => editMessage.Value)
                 .Subscribe(AddTodo)
                 .AddTo(this);
         }
@@ -27,9 +28,9 @@ namespace Examples.TodoList.Scripts
         {
             var hook = Hooks.UseState(HookKeys.Todos);
             var todo = new Todo(message);
-            var todos = hook.Current.ToList();
+            var todos = hook.Value.ToList();
             todos.Add(todo);
-            hook.Update(todos.ToArray());
+            hook.Value = todos.ToArray();
         }
     }
 }

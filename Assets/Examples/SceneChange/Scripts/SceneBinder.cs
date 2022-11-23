@@ -11,7 +11,7 @@ namespace Examples.SceneChange.Scripts
         private void Start()
         {
             var hook = Hooks.UseState(HookKeys.SCENE);
-            hook.Value.Subscribe(_sceneRenderer.Render).AddTo(this);
+            hook.Subscribe(_sceneRenderer.Render).AddTo(this);
         }
     }
 }

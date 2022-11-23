@@ -8,7 +8,7 @@ namespace Examples.SceneChange.Scripts
         public void Render(Page page)
         {
             var hook = Hooks.UseState(HookKeys.SCENE);
-            hook.Update(page.SceneNames);
+            hook.Value = page.SceneNames;
         }
     }
 }

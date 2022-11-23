@@ -16,10 +16,9 @@ namespace Examples.TodoList.Scripts
             var hook = Hooks.UseState(HookKeys.Filter);
             _tabInput.pointerDownAsObservable
                 .Select(_ => _filter)
-                .Subscribe(hook.Update)
+                .Subscribe(hook)
                 .AddTo(this);
-            hook.Value
-                .Select(x => _filter == x)
+            hook.Select(x => _filter == x)
                 .Subscribe(_tabRender.Render)
                 .AddTo(this);
         }

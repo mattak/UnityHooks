@@ -9,10 +9,9 @@ namespace UnityHooks.PluginPage.Binder
         private void Start()
         {
             var hook = Hooks.UseState(PageHookKeys.PAGE_STACK);
-            var stack = hook.Current;
+            var stack = hook.Value;
             if (stack.Count > 0) return;
-            stack.Push(page);
-            hook.Update(stack);
+            hook.Update(x => x.Push(page));
         }
     }
 }

@@ -17,13 +17,12 @@ namespace Examples.Counter.Scripts
 
             // click
             _button.clickAsObservable
-                .Select(_ => hook.Current + 1)
-                .Subscribe(hook.Update)
+                .Select(_ => hook.Value + 1)
+                .Subscribe(hook)
                 .AddTo(this);
 
             // render
-            hook.Value
-                .Select(x => x.ToString())
+            hook.Select(x => x.ToString())
                 .Subscribe(_text.Render)
                 .AddTo(this);
         }

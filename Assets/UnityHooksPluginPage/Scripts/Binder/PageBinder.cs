@@ -16,8 +16,7 @@ namespace UnityHooks.PluginPage.Binder
         private void Start()
         {
             var hook = Hooks.UseState(PageHookKeys.PAGE_STACK);
-            hook.Value
-                .Where(x => x.Count > 0)
+            hook.Where(x => x.Count > 0)
                 .Select(x => x.Peek())
                 .Subscribe(this.Render)
                 .AddTo(this);
@@ -26,7 +25,7 @@ namespace UnityHooks.PluginPage.Binder
         private void Render(Page page)
         {
             var hook = Hooks.UseState(PageHookKeys.SCENES);
-            hook.Update(page.scenes);
+            hook.Value = page.scenes;
         }
     }
 }

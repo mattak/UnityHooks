@@ -8,23 +8,23 @@ namespace Examples.SceneChange.Scripts
         public void Push(Page page)
         {
             var hook = Hooks.UseState(HookKeys.PAGE);
-            hook.Current.Push(page);
-            hook.Update(hook.Current);
+            hook.Value.Push(page);
+            hook.ForceUpdate();
         }
 
         public void Pop(Page page)
         {
             var hook = Hooks.UseState(HookKeys.PAGE);
-            hook.Current.Pop();
-            hook.Update(hook.Current);
+            hook.Value.Pop();
+            hook.ForceUpdate();
         }
 
         public void Replace(Page page)
         {
             var hook = Hooks.UseState(HookKeys.PAGE);
-            if (hook.Current.Count > 0) hook.Current.Pop();
-            hook.Current.Push(page);
-            hook.Update(hook.Current);
+            if (hook.Value.Count > 0) hook.Value.Pop();
+            hook.Value.Push(page);
+            hook.ForceUpdate();
         }
     }
 }

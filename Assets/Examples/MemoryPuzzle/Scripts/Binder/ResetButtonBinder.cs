@@ -14,7 +14,7 @@ namespace Examples.MemoryPuzzle.Scripts
             var reset = Hooks.UseState(HookKeys.Reset);
             GetComponent<ButtonInput>().clickAsObservable
                 .ThrottleFirst(TimeSpan.FromSeconds(1f))
-                .Subscribe(_ => reset.Update(true))
+                .Subscribe(_ => reset.Value = true)
                 .AddTo(this);
         }
     }
